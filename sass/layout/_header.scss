@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0 50px 0;
+
+  &__logo {
+    img {
+      width: 220px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    margin-right: 260px;
+    
+    
+    ul {
+      @include reset_list();
+      display: flex;
+      align-items: center;
+      gap: 56px;
+
+      li {
+        position: relative;
+        
+        a {
+          position: relative; //para meter despues el subryado
+          display: inline-block; //para meter despues el subryado
+          text-decoration: none;
+          color: $grey;
+          font-weight: 400;
+          font-size: 18px;
+          align-items: center;
+          gap: 5px;
+          white-space: nowrap; //xa q no se me ponga en dos lineas cuando hago hover
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $pink; 
+            transition: width 0.3s;
+          }
+          
+          &:hover {
+            color: white;
+          
+            &::after {
+              width: 70%;
+      }
+          }
+        }
+      }
+    }
+    
+  }
+}

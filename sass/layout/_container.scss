@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 60px;   // ← Un poco más de padding
+  padding-right: 40px;
+  overflow-x: hidden;
+
+  &__ellipse-1, &__ellipse-2 {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; // ← Esto permite clickar a través
+}
+
+  &__ellipse-1 {
+  bottom: 0px;
+  right: 30px;
+  }
+
+  &__ellipse-2 {
+  bottom: 0;
+  right: 30px;
+  }
+
+}
+

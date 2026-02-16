@@ -1,0 +1,69 @@
+@use '../abstracts' as *;
+
+
+.hero {
+  width: 100%;
+  position: relative;
+  z-index: 2; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0 300px 0;
+
+  background-image: url('../img/image_1.png'), url('../img/image_2.png'), url('../img/image_3.png'), url('../img/image_4.png'), url('../img/image_5.png');
+  background-position: right 720px top 10px, right 720px bottom 120px, right 460px top 10px, right 460px bottom 120px, top 140px right 190px ;
+  background-size: 220px;
+  background-repeat: no-repeat, no-repeat;
+
+
+  &__title {
+    width: 50%;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 96px;
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: $title-font;
+
+
+  }
+
+  &__subtitle{
+    width: 40%;
+    font-weight: 260;
+    font-size: 24px;
+    line-height: 40px;
+    margin: 0;
+    margin-bottom: 16px;
+    color: $grey;
+    padding-bottom: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+
+    .more {
+      display: flex;
+      align-items: center;
+      text-decoration: underline;
+      gap: 8px;
+
+      img {
+        width: 20px;
+        transition: filter 0.3s;
+      }
+
+      &:hover {
+        color: $pink;
+
+        img { //para q se ponga la flecha tb en rosa
+          filter: brightness(0) saturate(100%) invert(23%) sepia(95%) saturate(4724%) hue-rotate(327deg) brightness(91%) contrast(89%);
+        }
+      }
+    }
+  }
+
+}
+

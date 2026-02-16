@@ -1,0 +1,24 @@
+// _footer.scss
+@use '../abstracts' as *;
+
+.services {
+  display: flex;
+  gap: 30px;
+  width: 35%;
+  position: absolute;
+  left: 60px;
+  bottom: 120px;
+  z-index: 10;
+  font-size: 16px;
+  padding: 20px 0 0 0;
+
+  article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  padding: 0 48px 0 0;
+
+}
+
+}
