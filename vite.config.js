@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/header_gathsession/',
+  base: '/tarea_2_header_gathsession/',
   server: {
     open: true
   }
